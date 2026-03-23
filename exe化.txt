@@ -1,0 +1,11 @@
+exe化
+
+pyinstaller OtamaTuner.spec --clean
+
+
+# specファイルを自作。DLL取り込むように指定した
+
+# INTEL oneMKL ERROR: 指定されたモジュールが見つかりません。 mkl_intel_thread.2.dll. Intel oneMKL FATAL ERROR: Cannot load mkl_intel_thread.2.dll.
+# 以下無理だった。
+#pyinstaller --onedir --name OtamaTuner main.py --hidden-import=sounddevice --hidden-import=aubio --collect-binaries numpy
+#pyinstaller --noconsole --onefile --name OtamaTuner main.py --hidden-import=sounddevice --hidden-import=aubio
